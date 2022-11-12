@@ -1,7 +1,15 @@
 import "./App.css";
+import Pages from "./pages";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
-	return <div className="App">Initialization</div>;
+	return (
+		<div className="App">
+			<Router>
+				<Pages />
+			</Router>
+		</div>
+	);
 }
 
 export default App;
