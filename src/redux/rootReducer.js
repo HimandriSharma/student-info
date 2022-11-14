@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { subjectReducer } from "./subjects/subjectReducer";
+import subjectReducer from "./subjects/subjectReducer";
 
 const rootReducer = combineReducers({
 	subjects: subjectReducer,

@@ -26,8 +26,7 @@ export const fetchSubjectFailure = (err) => {
 export const fetchSubjects = () => {
 	return (dispatch) => {
 		dispatch(fetchSubjectRequest);
-		axios
-			.get("https://jsonplaceholder.typicode.com/posts")
+		axios.get("http://localhost:3004/subjects")
 			.then((res) => {
 				const users = res.data;
 				dispatch(fetchSubjectSuccess(users));
