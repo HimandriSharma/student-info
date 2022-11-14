@@ -1,20 +1,21 @@
 import { Button, Card } from "antd";
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { fetchSubjects } from "../redux";
+import Warning from "./warning";
 
-const Subject = ({subjectData, fetchSubjects}) => {
-	const { subject } = useLocation().state;
+const Subject = ({ selectedSubject }) => {
 	useEffect(() => {
 		fetchSubjects();
-	}, []);
-	console.log(subjectData)
-	return (
+	});
+	return Object.keys(selectedSubject.subject).length === 0 ? (
+		<Warning />
+	) : (
 		<Card className="card-style">
-			<h2>Subject: {subject.sub_name}</h2>
+			<h2>Subject: {selectedSubject.subject.sub_name}</h2>
 			<p style={{ maxWidth: "450px" }}>
-				<b>About:</b> {subject.sub_about}
+				<b>About:</b> {selectedSubject.subject.sub_about}
 			</p>
 			<Link to="/landing">
 				<Button>Go back</Button>
@@ -24,13 +25,8 @@ const Subject = ({subjectData, fetchSubjects}) => {
 };
 const mapStateToProps = (state) => {
 	return {
-		subjectData: state.subjects,
-	};
-};
-const mapDispatchToProps = (dispatch) => {
-	return {
-		fetchSubjects: () => dispatch(fetchSubjects()),
+		selectedSubject: state.selectedSubject,
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Subject);
+export default connect(mapStateToProps, null)(Subject);

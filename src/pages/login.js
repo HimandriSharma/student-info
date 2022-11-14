@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, Form, Input, Button } from "antd";
+import { postUserCred } from "../redux";
+import { connect } from "react-redux";
 
 const STUDENT_NAME = "STUDENT_NAME";
-const Login = () => {
-	useEffect(() => {
-		localStorage.setItem(STUDENT_NAME, null);
-	}, []);
+const Login = ({ postUserCred }) => {
 	const [form] = Form.useForm();
 	const navigate = useNavigate();
 	const handleFinish = (values) => {
 		localStorage.setItem(STUDENT_NAME, values.username);
+		postUserCred({ username: values.username, password: values.password });
 		navigate("/landing");
 	};
 	return (
@@ -33,7 +33,6 @@ const Login = () => {
 				>
 					<Input />
 				</Form.Item>
-
 				<Form.Item
 					label="Password"
 					name="password"
@@ -56,4 +55,9 @@ const Login = () => {
 	);
 };
 
-export default Login;
+const mapDispatchToProps = (dispatch) => {
+	return {
+		postUserCred: ({username, password}) => dispatch(postUserCred({username, password})),
+	};
+};
+export default connect(null, mapDispatchToProps)(Login);

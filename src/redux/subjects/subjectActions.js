@@ -28,8 +28,8 @@ export const fetchSubjects = () => {
 		dispatch(fetchSubjectRequest);
 		axios.get("http://localhost:3004/subjects")
 			.then((res) => {
-				const users = res.data;
-				dispatch(fetchSubjectSuccess(users));
+				const subjects = res.data;
+				dispatch(fetchSubjectSuccess(subjects));
 			})
 			.catch((err) => {
 				const msg = err.message;
