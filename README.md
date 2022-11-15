@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+## Directions to run local envrionment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Run Mock JSON API with:
+
+### `json-server --watch db.json --port 3004`
+
+Run Front-end on localhost:3000:
+
+### `npm start`
+
+Run JEST Unit Tests:
+
+### `npm test`
 
 ## Available Scripts
 
