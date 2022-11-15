@@ -4,7 +4,7 @@ Run Mock JSON API with:
 
 ### `json-server --watch db.json --port 3004`
 
-Run Front-end on localhost:3000 :
+Run Front-end on `localhost:3000` :
 
 ### `npm install`
 ### `npm start`
