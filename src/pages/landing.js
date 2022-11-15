@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { fetchSubjects, selectedSubject } from "../redux";
+import Warning from "./warning";
 
 const Landing = ({ username, subjectData, fetchSubjects, selectedSubject }) => {
 	const student_name = username;
@@ -14,7 +15,7 @@ const Landing = ({ username, subjectData, fetchSubjects, selectedSubject }) => {
 		navigate("/subject");
 		selectedSubject(v);
 	};
-	return (
+	return username ? (
 		<Card className="card-style">
 			<h2>Hello, {student_name}</h2>
 			{subjectData.subjects.map((v, i) => (
@@ -28,6 +29,8 @@ const Landing = ({ username, subjectData, fetchSubjects, selectedSubject }) => {
 				</Card>
 			))}
 		</Card>
+	) : (
+		<Warning />
 	);
 };
 const mapStateToProps = (state) => {

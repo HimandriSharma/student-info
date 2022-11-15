@@ -1,63 +1,7 @@
 {
   "users": [
-    {
-      "id": "07957b0e-e13e-4059-9cac-4ce9bda4eab5",
-      "username": "test",
-      "password": "pass"
-    },
-    {
-      "id": "28976384-038b-4091-b233-b738251752a1",
-      "username": "test",
-      "password": "test"
-    },
-    {
-      "id": "7ae400e9-a988-440a-881d-1f29fa141f2f",
-      "username": "demo",
-      "password": "test"
-    },
-    {
-      "id": "b73266c5-dfda-43b6-84eb-e9037617a825",
-      "username": "tony@starkindustries.com",
-      "password": "wes"
-    },
-    {
-      "id": "3989e7de-813a-4999-9b9f-de0c7a711245",
-      "username": "hel",
-      "password": "her"
-    },
-    {
-      "id": "df4feb23-520b-4d6f-847f-2bd5e4711c78",
-      "username": "himandri@ecocrumb.app",
-      "password": "we"
-    },
-    {
-      "id": "2b0d1812-73dd-4db6-abec-069ffa413078",
-      "username": "admin@admin.com",
-      "password": "res"
-    },
-    {
-      "id": "1bb92633-d782-4d7a-8a29-25e6f7131c37",
-      "username": "tony@starkindustries.com",
-      "password": "1"
-    }
+    
   ],
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "subjects": [
     {
       "sub_code": "ENG",

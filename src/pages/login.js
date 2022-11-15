@@ -3,18 +3,16 @@ import { useNavigate } from "react-router-dom";
 import { Card, Form, Input, Button } from "antd";
 import { postUserCred } from "../redux";
 import { connect } from "react-redux";
-
-const STUDENT_NAME = "STUDENT_NAME";
 const Login = ({ postUserCred }) => {
 	const [form] = Form.useForm();
 	const navigate = useNavigate();
 	const handleFinish = (values) => {
-		localStorage.setItem(STUDENT_NAME, values.username);
 		postUserCred({ username: values.username, password: values.password });
 		navigate("/landing");
 	};
 	return (
 		<Card className="card-style">
+			<h1>Login</h1>
 			<Form
 				name="login-form"
 				onFinish={handleFinish}
