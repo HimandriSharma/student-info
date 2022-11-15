@@ -1,6 +1,15 @@
 {
   "users": [
-    
+    {
+      "id": "442870ac-c32a-4f0e-8ff3-6267e56f3cde",
+      "username": "tony@starkindustries.com",
+      "password": "a"
+    },
+    {
+      "id": "b491e09d-e511-4139-a7ec-eaf414e3ae22",
+      "username": "tony@starkindustries.com",
+      "password": "pop"
+    }
   ],
   "subjects": [
     {

@@ -29,7 +29,7 @@ const Login = ({ postUserCred }) => {
 						},
 					]}
 				>
-					<Input />
+					<Input placeholder="John"/>
 				</Form.Item>
 				<Form.Item
 					label="Password"
@@ -41,10 +41,10 @@ const Login = ({ postUserCred }) => {
 						},
 					]}
 				>
-					<Input.Password />
+					<Input.Password placeholder="Secret"/>
 				</Form.Item>
 				<Form.Item>
-					<Button type="primary" htmlType="submit">
+					<Button type="primary" htmlType="submit" data-testid="submit">
 						Submit
 					</Button>
 				</Form.Item>
